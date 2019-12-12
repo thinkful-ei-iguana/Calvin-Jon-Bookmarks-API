@@ -5,7 +5,7 @@ const morgan = require("morgan");
 const cors = require("cors");
 const helmet = require("helmet");
 const { NODE_ENV } = require("./config");
-const ArticlesService = require('./articles-service');
+const ArticlesService = require("./articles-service");
 
 const app = express();
 
@@ -15,7 +15,8 @@ app.use(morgan(morganOption));
 app.use(helmet());
 
 app.get("/bookmarks", (req, res, next) => {
-  ArticlesService.getAllArticles(/* need knex instance here */)
+  const knexInstance = req.app.get("db");
+  ArticlesService.getAllArticles(knexInstance)
     .then(bookmarks => {
       res.json(bookmarks);
     })

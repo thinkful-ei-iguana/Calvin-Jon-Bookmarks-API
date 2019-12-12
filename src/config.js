@@ -5,5 +5,6 @@ module.exports = {
   driver: "pg",
   connectionString: process.env.DB_URL,
   DB_URL:
-    process.env.DB_URL || "postgresql://dunder_mifflin@localhost/bookmarks"
+    process.env.DB_URL || "postgresql://dunder_mifflin@localhost/bookmarks",
+  PORT: 8000
 };
