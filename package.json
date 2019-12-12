@@ -1,8 +1,8 @@
 {
-  "name": "express-boilerplate",
-  "version": "1.0.0",
+  "name": "bookmarks-server",
+  "version": "0.0.1",
   "description": "",
-  "main": "index.js",
+  "main": "src/server.js",
   "scripts": {
     "test": "mocha --require test/setup.js",
     "dev": "nodemon src/server.js",
@@ -13,24 +13,25 @@
     "deploy": "git push heroku master"
   },
   "keywords": [],
-  "author": "",
-  "license": "ISC",
+  "author": "Thomas `tomatao` Hudspith-Tatham <iammotivated@gmail.com>",
+  "license": "MIT",
   "dependencies": {
     "cors": "^2.8.5",
-    "dotenv": "^8.2.0",
-    "eslint": "^6.7.2",
-    "express": "^4.17.1",
+    "dotenv": "^6.2.0",
+    "express": "^4.16.4",
     "helmet": "^3.21.2",
-    "knex": "^0.20.4",
+    "knex": "^0.16.3",
     "morgan": "^1.9.1",
-    "pg": "^7.14.0",
+    "pg": "^7.8.0",
+    "postgrator-cli": "^3.1.0",
+    "uuid": "^3.3.2",
+    "valid-url": "^1.0.9",
     "winston": "^3.2.1"
   },
   "devDependencies": {
     "chai": "^4.2.0",
-    "mocha": "^6.2.2",
-    "nodemon": "^2.0.1",
-    "postgrator-cli": "^3.2.0",
-    "supertest": "^4.0.2"
+    "mocha": "^5.2.0",
+    "nodemon": "^1.18.9",
+    "supertest": "^3.3.0"
   }
 }
