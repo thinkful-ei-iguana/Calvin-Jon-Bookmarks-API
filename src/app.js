@@ -21,8 +21,6 @@ app.get("/bookmarks", (req, res, next) => {
       res.json(bookmarks);
     })
     .catch(next);
-
-  res.send("All bookmarks!");
 });
 
 app.use(function errorHandler(error, req, res, next) {
